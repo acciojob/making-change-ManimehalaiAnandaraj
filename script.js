@@ -15,17 +15,14 @@ const result={
 		n:0,
 		p:0
 };
-		for(let i=0;i<coins.length;i++)
+		for(let coin in coins)
+		   
 			{
-				while (c>=coins[i]) {
-					c -=coins[i];
-					result[i]++;
-					
-					
+				result[coin] = Math.floor(c/coins[coin]);
+				c %=coins[coin]	;
 				}
-			}
+			
 
-	
 return result;
 	
 }
